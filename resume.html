@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume – Karella Sonali Phani Sai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Times+New+Roman&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12px;
+      color: #000;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .page {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 20mm 18mm;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+    /* --- TOP BAR ACTIONS (web only, hidden on print) --- */
+    .top-bar {
+      width: 210mm;
+      margin: 0 auto 12px;
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .top-bar a {
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      padding: 7px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .btn-back {
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+    }
+    .btn-print {
+      background: #7c3aed;
+      color: #fff;
+      border: none;
+    }
+    .btn-back:hover { background: #16213e; }
+    .btn-print:hover { background: #6d28d9; }
+
+    /* --- HEADER --- */
+    .resume-header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .resume-header h1 {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 11.5px;
+    }
+    .contact-row a {
+      color: #000;
+      text-decoration: none;
+    }
+    .contact-row span, .contact-row a {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* --- DIVIDER --- */
+    hr {
+      border: none;
+      border-top: 1.5px solid #000;
+      margin: 6px 0;
+    }
+
+    /* --- SECTION --- */
+    .section { margin-bottom: 8px; }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 4px;
+    }
+
+    /* --- EDUCATION --- */
+    .edu-entry { margin-bottom: 4px; }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-name { font-weight: bold; font-size: 12px; }
+    .edu-date { font-size: 11.5px; }
+    .edu-sub { font-size: 11.5px; margin-top: 1px; }
+    .edu-score { font-size: 11.5px; }
+
+    /* --- SKILLS --- */
+    .skills-block p { font-size: 11.5px; margin-bottom: 3px; }
+
+    /* --- INTEREST --- */
+    .interest-list { padding-left: 18px; font-size: 11.5px; }
+    .interest-list li { margin-bottom: 1px; }
+
+    /* --- PROJECTS --- */
+    .project-entry { margin-bottom: 6px; }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .project-title { font-weight: bold; font-size: 12px; }
+    .project-date { font-size: 11.5px; }
+    .project-bullets { padding-left: 18px; margin-top: 2px; }
+    .project-bullets li { font-size: 11.5px; margin-bottom: 1px; }
+    .project-link { font-size: 11.5px; margin-top: 2px; }
+    .project-link a { color: #000; }
+
+    /* --- INTERNSHIPS --- */
+    .intern-entry {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+
+    /* --- CERTIFICATIONS --- */
+    .cert-entry { margin-bottom: 5px; }
+    .cert-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .cert-title { font-weight: bold; font-size: 12px; }
+    .cert-date { font-size: 11.5px; }
+    .cert-desc { font-size: 11.5px; margin-top: 2px; }
+
+    /* --- LEADERSHIP --- */
+    .leader-list { padding-left: 18px; }
+    .leader-list li { font-size: 11.5px; margin-bottom: 2px; }
+
+    /* --- LANGUAGE --- */
+    .lang-list { padding-left: 18px; }
+    .lang-list li { font-size: 11.5px; margin-bottom: 1px; }
+
+    /* --- PRINT --- */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .page { box-shadow: none; margin: 0; padding: 15mm 15mm; width: 100%; }
+      .top-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Web-only action bar -->
+  <div class="top-bar">
+    <a href="index.html" class="btn-back">← Back to Portfolio</a>
+    <a href="#" onclick="window.print(); return false;" class="btn-print">🖨 Print / Save as PDF</a>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="resume-header">
+      <h1>Karella Sonali Phani Sai</h1>
+      <div class="contact-row">
+        <span>📍 Tanuku</span>
+        <span>✉ <a href="mailto:sonalikarella@gmail.com">sonalikarella@gmail.com</a></span>
+        <span>📞 +91 6300329199</span>
+        <span><a href="https://github.com/Sonali422" target="_blank">⊙ GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/sonali-phani-sai-karella-02b7432a4" target="_blank">in LinkedIn</a></span>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <p style="font-size:11.5px; line-height:1.5;">
+        Information Technology student with hands-on experience in Java Web Development, Python, Machine Learning, and MySQL, skilled in full-stack development, machine learning, and database management with strong knowledge of OOP, Data Structures, and software development, seeking a Software Developer or Machine Learning role to apply technical and problem-solving skills.
+      </p>
+    </div>
+
+    <hr />
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+
+      <div class="edu-entry">
+        <div class="edu-row">
+          <span class="edu-name">Bachelor of Technology – Information Technology</span>
+          <span class="edu-date">2023 – 2027</span>
+        </div>
+        <div class="edu-sub">Sagi RamaKrishnam Raju Engineering College (A)</div>
+        <div class="edu-score">CGPA: 9.22</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-row">
+          <span class="edu-name">Intermediate – MPC</span>
+          <span class="edu-date">2021 – 2023</span>
+        </div>
+        <div class="edu-sub">Sasi Junior College</div>
+        <div class="edu-score">Percentage: 98.5</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-row">
+          <span class="edu-name">SSC</span>
+          <span class="edu-date">2021</span>
+        </div>
+        <div class="edu-sub">Roots School Of Essential Faculties</div>
+        <div class="edu-score">Percentage: 100</div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="skills-block">
+        <p><strong>Technical Skills:</strong> Python, Java, Machine Learning, HTML, CSS, JavaScript</p>
+        <p><strong>Tools:</strong> MySQL, Git, GitHub, Visual Studio Code, Jupyter Notebook</p>
+        <p><strong>Soft Skills:</strong> Problem Solving, Time Management, Creativity</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- AREA OF INTEREST -->
+    <div class="section">
+      <div class="section-title">Area Of Interest</div>
+      <ul class="interest-list">
+        <li>Java Web Development</li>
+        <li>Machine Learning</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title">Daily Expense Manager (Java Web Application)</span>
+          <span class="project-date">2025</span>
+        </div>
+        <ul class="project-bullets">
+          <li>Built and enhanced a <strong>full-stack web application</strong> using <strong>Java, JSP, Servlets, HTML, CSS, and MySQL.</strong></li>
+          <li>Implemented <strong>secure user authentication</strong> (login and registration).</li>
+          <li>Developed <strong>CRUD operations</strong> to manage expense records with amount, category, date, and description.</li>
+          <li>Integrated <strong>MySQL using JDBC</strong> for efficient and user-specific data storage.</li>
+          <li>Designed a <strong>responsive UI</strong> with improved user experience and real-time notifications.</li>
+          <li>Deployed the application publicly and managed version control using <strong>GitHub</strong>.</li>
+        </ul>
+        <div class="project-link"><strong>Links:</strong> <a href="https://github.com/Sonali422/DailyExpenseManagerr" target="_blank">⊙ GitHub</a></div>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title">Baby Cry Detection System using Machine Learning</span>
+          <span class="project-date">2026</span>
+        </div>
+        <ul class="project-bullets">
+          <li>Developed a <strong>Machine Learning web application</strong> using <strong>Python and Streamlit</strong>.</li>
+          <li>Performed <strong>audio preprocessing, feature extraction, and model training</strong>.</li>
+          <li>Implemented <strong>Random Forest algorithm</strong> for prediction.</li>
+          <li>Integrated trained <strong>ML model (.pkl)</strong> for real-time prediction.</li>
+          <li>Used <strong>Git and GitHub</strong> for version control.</li>
+        </ul>
+        <div class="project-link"><strong>Links:</strong> <a href="https://github.com/Sonali422/BabyCryDetection" target="_blank">⊙ GitHub</a></div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- INTERNSHIPS -->
+    <div class="section">
+      <div class="section-title">Internships</div>
+      <div class="intern-entry">
+        <span>Java Full Stack Developer Virtual Internship (EDUSKILLS – AICTE)</span>
+        <span>Oct 2026 – Dec 2026</span>
+      </div>
+      <div class="intern-entry">
+        <span>Google AI-ML Internship (EDUSKILLS – AICTE)</span>
+        <span>Jan 2026 – Mar 2026</span>
+      </div>
+      <div class="intern-entry">
+        <span>Machine Learning Intern – InnoKnowvex Academy</span>
+        <span>2025</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="section-title">Certifications</div>
+
+      <div class="cert-entry">
+        <div class="cert-header">
+          <span class="cert-title">Artificial Intelligence: Concepts and Techniques (NPTEL)</span>
+          <span class="cert-date">Jul 2025 – Oct 2025</span>
+        </div>
+        <div class="cert-desc">Completed a 12-week course covering theoretical foundations and practical applications of Artificial Intelligence.</div>
+      </div>
+
+      <div class="cert-entry">
+        <div class="cert-header">
+          <span class="cert-title">Machine Learning Training Certification</span>
+          <span class="cert-date">Apr 2025 – Jun 2025</span>
+        </div>
+        <div class="cert-desc">Completed a hands-on training program in Machine Learning, including Python programming, data preprocessing, model building, and implementation of ML algorithms.</div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- LEADERSHIP -->
+    <div class="section">
+      <div class="section-title">Leadership and Extra-Curricular Activities</div>
+      <ul class="leader-list">
+        <li><strong>President, Women Empowerment Cell</strong> – Organized self-defense training, awareness programs, and empowerment events.</li>
+        <li><strong>Executive Body Member, Student Council</strong> – Contributed to organizing and coordinating college events.</li>
+        <li>Developed <strong>leadership, event management, and communication skills</strong>.</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <!-- LANGUAGE -->
+    <div class="section">
+      <div class="section-title">Language</div>
+      <ul class="lang-list">
+        <li>English</li>
+        <li>Telugu</li>
+      </ul>
+    </div>
+
+  </div><!-- end .page -->
+
+</body>
+</html>
