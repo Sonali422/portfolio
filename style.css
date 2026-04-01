@@ -1,5 +1,5 @@
 /* ===================================
-   HEMALATHA GUTHURTHI — PORTFOLIO CSS
+   KARELLA SONALI PHANI SAI — PORTFOLIO CSS
    Dark Futuristic Theme
 =================================== */
 
@@ -182,9 +182,13 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(135deg, #0d1220, #1a2040);
   border: 2px solid var(--border-accent);
   display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
-  color: rgba(0,212,255,0.4);
   overflow: hidden;
+}
+
+.hero-avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-greeting { font-size: 1rem; color: var(--accent-blue); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; }
